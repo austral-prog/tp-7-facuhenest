@@ -5,9 +5,7 @@ def enumerate_list(strings):
             new_list.append(f"{index}. {current_elem}")
     return new_list
 
-colors = ["Red", "Green", "", "White", "Black"]
-print(enumerate_list(colors))  
-
+ 
 
 
 def enumerate_backwards(strings):
@@ -17,5 +15,3 @@ def enumerate_backwards(strings):
             new_list.append(f"{index}. {current_elem[::-1]}")
     return new_list
 
-colors = ["Red", "Green", "", "White", "Black"]
-print(enumerate_backwards(colors))  
