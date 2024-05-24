@@ -1,37 +1,31 @@
-def index_of_by_index(word, strings, start_index):
-    index = start_index
-    while index < len(strings):
-        if word == strings[index]:
+def index_of_by_index(word, list, index):
+    index = index
+    while index < len(list):
+        if word == list[index]:
             return index
         index += 1 
-    return -1
+    return -1 
 
-
-
-def index_of_empty(strings):
+def index_of_empty(list):
     index = 0
-    while index < len(strings):
-        if strings[index] == "":
+    while index < len(list):
+        if list[index] == "":
             return index
         index += 1 
-    return -1
+    return -1   
 
-
-
-def index_of(word, strings):
+def index_of(word, list):
     index = 0
-    while index < len(strings):
-        if word == strings[index]:
+    while index < len(list):
+        if word == list[index]:
             return index
-        index += 1
-    return -1
-
-
-def put(word, strings):
+        index += 1 
+    return -1   
+def put(word, list):
     index = 0
-    while index < len(strings):
-        if strings[index] == "":
-            strings[index] = word
+    while index < len(list):
+        if list[index] == "":
+            list[index] = word
             return index
         index += 1
     return -1
@@ -39,14 +33,12 @@ def put(word, strings):
 
 
 
-def remove(word, strings):
+def remove(word, list):
     index = 0
     eliminations = 0
-    while index < len(strings):
-        if word == strings[index]:
-            strings[index] = ""
+    while index < len(list):
+        if word == list[index]:
+            list[index] = ""
             eliminations += 1
         index += 1
     return eliminations
-
-

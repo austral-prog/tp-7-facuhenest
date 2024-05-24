@@ -1,17 +1,24 @@
-def enumerate_list(strings):
-    new_list = []
-    for index, current_elem in enumerate(strings):
-        if current_elem:
-            new_list.append(f"{index}. {current_elem}")
-    return new_list
+def enumerate_list(lista):
+    lista_enumerada = []
+    counter = 0
+    for indice, valor in enumerate(lista):
+        if valor:    
+            lista_enumerada.append(f"{counter}. {valor.title()}")
+            counter +=1
+    return lista_enumerada
 
  
 
 
-def enumerate_backwards(strings):
+def enumerate_backwards(lista):
     new_list = []
-    for index, current_elem in enumerate(strings):
-        if current_elem:
-            new_list.append(f"{index}. {current_elem[::-1]}")
+    counter = 0
+    for indice, valor in enumerate(lista):
+        if valor:
+            new_element = f"{counter}. {valor[::-1]}"
+            new_list.append(new_element)
+            counter += 1
     return new_list
-
+colors = ["Red", "Green", "", "White", "Black", ""]
+print(enumerate_list(colors))  
+print(enumerate_backwards(colors)) 
